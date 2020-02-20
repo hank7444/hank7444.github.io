@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1,requiresActiveX=true">
+    <title>Campaign Sites 系統架構規劃</title>
+
+     <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-64600320-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+</head>
+
+<body>
+
+    <div id="project-wrap">
+
+        <div class="row">
+            <div class="span12 text-center">
+
+                <div class="headline">
+
+                    <h1>Campaign Sites 系統架構規劃</h1>
+
+                </div>
+                <!-- end .headline -->
+
+            </div>
+            <!-- end .span12 -->
+        </div>
+        <!-- end .row -->
+
+
+
+        <div class="row">
+            <div class="span12">
+
+                <h3 class="text-uppercase">作品資訊</h3>
+                <p>
+                    作品分類：活動網站
+                    <br>製作時間：2015.03 ~ 2015.05
+                    <br>工作內容：網站製作
+                    <br>
+                    Campaign Sites 系統架構規劃
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span10">
+
+                <h3 class="text-uppercase">作品描述</h3>
+                <p>
+                    當初做這些活動頁面時，每次都必須將前端部分打包給後端套版，然後只要有問題，前面的步驟就要一直重複，
+                    其實這樣很沒有效率，而且很浪費工程師的開發能量。所以我根據之前看過一篇百度UAE Team所提出的"大前端"概念，
+                    讓前端從server到client完全負責，跟主站只透過API進行溝通。
+                </p>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="span10">
+
+                <h3 class="text-uppercase">製作過程感想</h3>
+                <p>
+                    我規劃在AWS上一個簡單的服務架構(後來搬到azure上),分為sta(測試)與prod(環境),彼此之間走內部IP溝通，
+                    並且在prod環境中使用ELB進行分流。
+
+                    在自動化部署程式方面，我這邊使用jenkins進行，jenkins可以很方便地讓系統執行寫好的script，要進行測試部署都非常方便。
+
+                    當初在進行這個任務的時候，其實自己也很不確定是否可行，因為在server管理方面我也只懂一點皮毛，那時候連VPC是什麼也不知道，只好硬著頭皮去找資料、看書、問當MIS的朋友，然後自己慢慢不斷的嘗試出來。
+
+                    當這個架構真的正式運行的時候，真的很有成就感，而且明顯的節省了後端的開發人力，讓後端人力可以更專注在主要產品上。
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- end #project-wrap -->
+
+</body>
+
+</html>

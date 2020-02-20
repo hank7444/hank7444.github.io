@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1,requiresActiveX=true">
+    <title>Accupass 活動抽票機</title>
+
+     <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-64600320-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+</head>
+
+<body>
+
+    <div id="project-wrap">
+
+        <div class="row">
+            <div class="span12 text-center">
+
+                <div class="headline">
+
+                    <h1>Accupass University</h1>
+
+                </div>
+                <!-- end .headline -->
+
+            </div>
+            <!-- end .span12 -->
+        </div>
+        <!-- end .row -->
+
+
+        <div class="row">
+            <div class="span12  text-center">
+                <div class="portfolio-slider">
+
+                    <ul class="slides">
+                        <li>
+                            <img height="500" src="_content/portfolio/accupass-accumaji/slide/1.jpg" alt="首頁">
+                        </li>
+                        <li>
+                            <img height="500" src="_content/portfolio/accupass-accumaji/slide/2.jpg" alt="朋友分享頁">
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span12">
+
+                <h3 class="text-uppercase">作品資訊</h3>
+                <p>
+                    作品分類：活動網站
+                    <br>製作時間：2015.07 ~ 2015.08
+                    <br>工作內容：網站製作
+                    <br>參考網址：<a href="http://campaign.accupass.com/accumaji/" target="_blank">Accupass University</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span10">
+
+                <h3 class="text-uppercase">作品描述</h3>
+                <p>
+                    Accupass University 活動網站
+                </p>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="span10">
+
+                <h3 class="text-uppercase">製作過程感想</h3>
+                <p>
+                    第一個使用node(expressJS)開發的網站，為了SEO而採用server side render的方式，
+                    所以是node跟產品後端API拿資料後再呈現，體現了"大前端"的精神。
+
+                    另外在server設置部分，由於node是由port在分服務，所以我又透過nginx進行反向代理，
+                    另外如果node服務掛了要能自動重啟，這部分用了PM2。
+
+                    然而過了一陣子發現，如果production服務某一台node服務掛了，我要怎麼才能及時收到通知呢?，
+                    並且我要怎麼知道錯誤的原因?
+
+                    收到通知部分，我用了雲端服務來每五分鐘確認一次網站是否活著，但是由於在架構上只會確認到第一層web serice(nginx), 因次我又額外寫了一個服務，可以直接針對node服務進行健康度的確認。
+
+                    在這邊我採用了elastic search來儲存所有40x與50x錯誤，只要production環境有發生錯誤，就會自動將
+                    錯誤訊息傳到sta上儲存，方便查詢。
+
+                    在做這個案子的時候，雖然在前端部分並沒有太多複雜的功能，可是在後端與系統架構部分讓我學習了很多！
+
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- end #project-wrap -->
+
+</body>
+
+</html>
